@@ -1,7 +1,7 @@
 // Put carousel in a IIFE
 // Load three different Ring chart
 (function() {
-  const url = 'http://dev.ericdelerue.com/';
+  const url = 'http://127.0.0.1/';
 
   // create the svg rings using Ring constructor
   const revenueRing = new Ring({
