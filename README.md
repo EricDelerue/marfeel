@@ -73,7 +73,7 @@ Three json files have been created in the /database/ directory. They are called 
 
 ### 2. From a fake connection to a database through express mini server
 
-All the backend files are in the /backend/ directory. 
+All the backend files are in the /backend/ directory. A timeout of 2 seconds has been set to simulate a database access.
 
 In the command line, go into your /marfeel/ directory and type: 
 
