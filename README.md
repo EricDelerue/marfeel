@@ -53,16 +53,28 @@ No additional libraries or frameworks or configuration files have been used, exc
 
 ## Installation (local):
 
-Put the files in a directory (i.e.: /marfeel/)
+Put the files in a directory (i.e.: /marfeel/) on your local server
+
+Open a browser window and type http://127.0.0.1/marfeel/index.html 
+
+## Backend Installation (local):
+
+All the backend files are in the /backend/ directory
 
 Open the command line and type: 
 
 	npm install
 
-Then 
+Then start express server for the backend
 
 	npm start 
 
-Open a browser window and type http://localhost:3000/index.html 
+Open a browser window and type one of these endpoints:
+
+http://localhost:3000/backend/revenue 
+
+http://localhost:3000/backend/impresions 
+
+http://localhost:3000/backend/visits 
 
 Wait 2 seconds (setTimeout to simulate a database access) to see the result
