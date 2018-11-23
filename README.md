@@ -93,4 +93,4 @@ Open a browser window and type one of these endpoints:
 
 Wait 2 seconds (setTimeout to simulate a database access) to see the result
 
-Use this endpoints with the Ring class in js/boot.js 
+Use this endpoints with the Ring class in js/boot.js as above in the first solution.
