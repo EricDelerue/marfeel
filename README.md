@@ -61,11 +61,11 @@ Open a browser window and type http://127.0.0.1/marfeel/index.html
 
 All the backend files are in the /backend/ directory
 
-Open the command line and type: 
+In the command line, go into your /marfeel/ directory and type: 
 
 	npm install
 
-Then start express server for the backend
+Then start express server for the backend:
 
 	npm start 
 
