@@ -12,15 +12,27 @@
 
 ### Tasks
 
+- Produce a reusable component (View) connected to 3 different data models.
+- Produce a reliable and unit tested code (we recommend Jasmine).
+- There's a clear separation of concerns between different layers (presentation, data...) In order to do that, you will need a dependency management tool (npm).
+- Pixel accuracy reproducing designs
+- Use of D3JS library
+- Use of pure Javascript language ES6
 
 ## Author: 
 
 Eric Delerue
 delerue_eric@hotmail.com
 
+## Demo
+
+A demo of the test can be reach here:
+
+* [Demo](http://dev.ericdelerue.com/marfeel/index.html) 
+
 ## Note: 
 
-No additional libraries or configuration files have been used, except prettier for code styling.
+No additional libraries or frameworks or configuration files have been used, except prettier for code styling.
 
 The following functionalities do not appear in the project but they will be implemented soon:
 
