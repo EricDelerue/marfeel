@@ -6,9 +6,9 @@
 
 ### Goal
 
-* Create a client side web application that reproduces the screen shot .
+* Create a client side web application that reproduces the screen shot below.
 
-http://dev.ericdelerue.com/marfeel/img/marfeel-test.png
+![Marfeel Technical Test](http://dev.ericdelerue.com/marfeel/img/marfeel-test.png)
 
 ### Tasks
 
