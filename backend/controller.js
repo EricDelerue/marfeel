@@ -9,10 +9,8 @@ const logger = require('./logger');
 
 const getData = async function(datatype) {
   try {
-    // const datatype = arguments.length ? arguments[0] : null;
-    logger.info('getData datatype: ', datatype);
 
-    //const db = new DatabaseClient();
+    logger.info('getData datatype: ', datatype);
 
     // Connect to the database
     const connection = await db.connect(true);
