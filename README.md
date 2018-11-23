@@ -51,15 +51,29 @@ No additional libraries or frameworks or configuration files have been used, exc
   - express 4.16.4
   - D3.js 4.10.0
 
-## Installation (local):
+## Front-End Installation (local):
 
-Put the files in a directory (i.e.: /marfeel/) on your local server
+Put all the files in a directory (i.e.: /marfeel/) on your local server
 
 Open a browser window and type http://127.0.0.1/marfeel/index.html 
 
 ## Backend Installation (local):
 
-All the backend files are in the /backend/ directory
+There is currently TWO WAYS t oget the data from the backend:
+
+### 1. From json files
+
+Three json files have been created in the /database/ directory. They are called as endpoints by the Ring class in js/boot.js 
+
+	http://127.0.0.1/marfeel/database/revenue.json
+
+	http://127.0.0.1/marfeel/database/impresions.json
+
+	http://127.0.0.1/marfeel/database/visits.json
+
+### 2. From a fake connection to a database through express mini server
+
+All the backend files are in the /backend/ directory. 
 
 In the command line, go into your /marfeel/ directory and type: 
 
@@ -71,10 +85,12 @@ Then start express server for the backend:
 
 Open a browser window and type one of these endpoints:
 
-http://localhost:3000/backend/revenue 
+	http://localhost:3000/backend/revenue 
 
-http://localhost:3000/backend/impresions 
+	http://localhost:3000/backend/impresions 
 
-http://localhost:3000/backend/visits 
+	http://localhost:3000/backend/visits 
 
 Wait 2 seconds (setTimeout to simulate a database access) to see the result
+
+Use this endpoints with the Ring class in js/boot.js 
