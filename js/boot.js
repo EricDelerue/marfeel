@@ -1,13 +1,13 @@
 // Put carousel in a IIFE
 // Load three different Ring chart
 (function() {
-  const url = 'http://127.0.0.1/';
+  const url = 'http://127.0.0.1/marfeel/';
 
   // create the svg rings using Ring constructor
   const revenueRing = new Ring({
     title: 'Revenue',
     element: document.querySelector('#revenue'),
-    endpoint: url + 'marfeel/database/revenue.json',
+    endpoint: url + 'database/revenue.json',
     /* for test purpose only
     dataset: [
       {
@@ -26,7 +26,7 @@
   const impresionsRing = new Ring({
     title: 'Impresions',
     element: document.querySelector('#impresions'),
-    endpoint: url + 'marfeel/database/impresions.json',
+    endpoint: url + 'database/impresions.json',
     /* for test purpose only
     dataset: [
       {
@@ -45,7 +45,7 @@
   const visitsRing = new Ring({
     title: 'Visits',
     element: document.querySelector('#visits'),
-    endpoint: url + 'marfeel/database/visits.json',
+    endpoint: url + 'database/visits.json',
     /* for test purpose only
     dataset: [
       {
