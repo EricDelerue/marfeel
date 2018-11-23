@@ -35,12 +35,6 @@ app.get('/backend/:datatype', async (req, res, next) => {
     const datatype = req.params.datatype;
     const testResult = await getData(datatype);
     //logger.info('testResult: ', testResult);
-
-    //res.set({
-    //  'Content-Type': 'application/json',
-    //  'Access-Control-Allow-Origin': '*'
-    //});
-
     res.json(testResult);
   } catch (e) {
     //this will eventually be handled by the error handling middleware
