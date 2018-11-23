@@ -8,7 +8,7 @@
     title: 'Revenue',
     element: document.querySelector('#revenue'),
     endpoint: url + 'marfeel/database/revenue.json',
-    // for test purpose only
+    /* for test purpose only
     dataset: [
       {
         name: 'tablet',
@@ -18,7 +18,7 @@
         name: 'smartphone',
         value: 80000,
       },
-    ],
+    ],*/
     domain: ['tablet', 'smartphone'],
     range: ['lightgreen', 'darkgreen'],
   });
@@ -27,7 +27,7 @@
     title: 'Impresions',
     element: document.querySelector('#impresions'),
     endpoint: url + 'marfeel/database/impresions.json',
-    // for test purpose only
+    /* for test purpose only
     dataset: [
       {
         name: 'tablet',
@@ -37,7 +37,7 @@
         name: 'smartphone',
         value: 30000000,
       },
-    ],
+    ],*/
     domain: ['tablet', 'smartphone'],
     range: ['lightblue', 'darkblue'],
   });
@@ -46,7 +46,7 @@
     title: 'Visits',
     element: document.querySelector('#visits'),
     endpoint: url + 'marfeel/database/visits.json',
-    // for test purpose only
+    /* for test purpose only
     dataset: [
       {
         name: 'tablet',
@@ -56,7 +56,7 @@
         name: 'smartphone',
         value: 120000000,
       },
-    ],
+    ],*/
     domain: ['tablet', 'smartphone'],
     range: ['#ffbf00', '#ff8000'],
   });

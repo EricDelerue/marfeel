@@ -26,13 +26,10 @@ class Ring {
   }
 
   init() {
-    // define width, height and margin
+    // define width, height, radius and margins
     this.width = this.element.offsetWidth;
-    //logger.info('this.width',this.width);
     this.height = this.element.offsetHeight;
-    //logger.info('this.height',this.height);
-    this.radius = this.width / 3.5; // - 20;
-    //logger.info('this.radius',this.radius);
+    this.radius = this.width / 3.5;
     this.thickness = 10;
 
     this.margin = {
@@ -51,7 +48,6 @@ class Ring {
     this.total = this.dataset.reduce((acc, currValue) => {
       return acc + currValue.value;
     }, 0);
-    //logger.info('this.total',this.total);
 
     this.domain = this.dataset.map(d => d.name);
 
@@ -84,12 +80,6 @@ class Ring {
     colour.domain = this.domain;
 
     const paths = graph.selectAll('path').data(ring(this.dataset));
-
-    // handle the exit selection
-    //paths.exit().remove();
-
-    // handle the current DOM path updates
-    //paths.attr('d', arcPath);
 
     paths
       .enter()

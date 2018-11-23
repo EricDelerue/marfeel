@@ -21,7 +21,7 @@
 - Insert the 3 different graphs in an animated carrousel-like (or gallery) component on window resize
 - Pixel accuracy reproducing designs
 
-## Data:
+### Data:
 
 - No backend development / dependency but a mocked communication with a fake server.
 
