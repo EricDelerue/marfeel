@@ -85,11 +85,11 @@ Then start express server for the backend:
 
 Open a browser window and type one of these endpoints:
 
-	http://localhost:3000/backend/revenue 
+	http://127.0.0.1:3000/backend/revenue 
 
-	http://localhost:3000/backend/impresions 
+	http://127.0.0.1:3000/backend/impresions 
 
-	http://localhost:3000/backend/visits 
+	http://127.0.0.1:3000/backend/visits 
 
 Wait 2 seconds (setTimeout to simulate a database access) to see the result
 

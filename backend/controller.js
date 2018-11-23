@@ -9,7 +9,6 @@ const logger = require('./logger');
 
 const getData = async function(datatype) {
   try {
-
     logger.info('getData datatype: ', datatype);
 
     // Connect to the database
@@ -19,7 +18,7 @@ const getData = async function(datatype) {
     // Get the data
     const { revenue, impresions, visits } = await connection.load();
 
-    // Send it back
+    // Filter it and send it back
     switch (datatype) {
       case 'revenue':
         return revenue;

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const logger = require('./logger');
 
 const db = require('./database');
-const getData = require('./model');
+const getData = require('./controller');
 
 const app = express();
 
@@ -23,11 +23,24 @@ app.get('/', (req, res) => {
 
 app.use(express.static(__dirname + '/'));
 
+app.use((req, res, next) => {
+  res.append('Access-Control-Allow-Origin', ['*']);
+  res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.append('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 app.get('/backend/:datatype', async (req, res, next) => {
   try {
     const datatype = req.params.datatype;
     const testResult = await getData(datatype);
-    logger.info('testResult: ', testResult);
+    //logger.info('testResult: ', testResult);
+
+    //res.set({
+    //  'Content-Type': 'application/json',
+    //  'Access-Control-Allow-Origin': '*'
+    //});
+
     res.json(testResult);
   } catch (e) {
     //this will eventually be handled by the error handling middleware

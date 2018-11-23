@@ -199,10 +199,10 @@ class Ring {
   fetchData() {
     const parameters = { method: 'GET' };
 
-    /* fetch data from api endpoint */
-
-    fetch(this.endpoint, parameters)
+    // fetch data from api endpoint
+    fetch(this.endpoint, { method: 'GET', mode: 'cors' })
       .then(response => response.json())
+      //.then(response => logger.info('response.text', response.text()))
       .then(data => this.setData(data))
       .catch(error => logger.error(error));
   }

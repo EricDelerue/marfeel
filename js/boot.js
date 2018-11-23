@@ -7,8 +7,9 @@
   const revenueRing = new Ring({
     title: 'Revenue',
     element: document.querySelector('#revenue'),
-    endpoint: url + 'database/revenue.json',
-    /* for test purpose only
+    endpoint: 'http://127.0.0.1:3000/backend/revenue',
+    /* endpoint: url + 'database/revenue.json',
+    for test purpose only
     dataset: [
       {
         name: 'tablet',
