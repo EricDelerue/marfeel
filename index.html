@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Marfeel Technical Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/marfeel.css">
+</head>
+<body>
+
+
+
+  <div class="wrap">
+
+  	<ul id="rings-container" class="rings">
+  		
+  	<li class="ring-container">
+  		<div id="revenue" class="ring"></div>
+  	</li>
+  	
+  	<li class="ring-container">
+  		<div id="impresions" class="ring"></div>
+  	</li>
+  	
+  	<li class="ring-container">
+  		<div id="visits" class="ring"></div>
+  	</li>
+  	
+  	</ul>
+
+  </div>
+
+	<!-- load in D3 v4 and Ring constructor script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script>
+	<script src="js/logger.js"></script>
+  <script src="js/marfeel.js"></script>
+  <script>
+
+	// Put carousel in a IIFE
+	// Load three different Ring chart
+	(function(){
+		
+		const url = 'http://127.0.0.1/';
+
+		// create the svg rings using Ring constructor
+		const revenueRing = new Ring({
+			title: 'Revenue',
+			element: document.querySelector('#revenue'),
+			endpoint: url + 'marfeel/database/revenue.json',
+			// for test purpose only
+		  dataset: [{
+				"name": "tablet",
+				"value": 120000
+			}, {
+				"name": "smartphone",
+				"value": 80000
+			}],
+		  domain: ['tablet', 'smartphone'],
+		  range: ['lightgreen', 'darkgreen']
+		});
+
+		const impresionsRing = new Ring({
+			title: 'Impresions',
+			element: document.querySelector('#impresions'),
+			endpoint: url + 'marfeel/database/impresions.json',
+			// for test purpose only
+		  dataset: [{
+				"name": "tablet",
+				"value": 20000000
+			}, {
+				"name": "smartphone",
+				"value": 30000000
+			}],
+		  domain: ['tablet', 'smartphone'],
+		  range: ['lightblue', 'darkblue']
+		});
+
+		const visitsRing = new Ring({
+			title: 'Visits',
+			element: document.querySelector('#visits'),
+			endpoint: url + 'marfeel/database/visits.json',
+			// for test purpose only
+		  dataset: [{
+				"name": "tablet",
+				"value": 480000000
+			}, {
+				"name": "smartphone",
+				"value": 120000000
+			}],
+		  domain: ['tablet', 'smartphone'],
+		  range: ['#ffbf00', '#ff8000']
+		});
+
+		// redraw chart on each resize
+		d3.select(window).on('resize', () => { 
+		
+			revenueRing.redraw(); 
+			impresionsRing.redraw(); 
+			visitsRing.redraw(); 
+		
+		});
+	  	
+	})();
+
+  </script>
+  
+</body>
+</html>

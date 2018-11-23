@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	background-color: #f1f1f1;  
+}
+
+.align-right {
+	text-align: right;
+}
+
+.align-left {
+	text-align: left;
+}
+
+     
+.wrap {
+	width: 380px; /* 320px + 60px margin left and right */
+	height: 380px;
+	margin: auto;
+	padding: 30px 0;
+  overflow: hidden;
+  overflow-x: scroll;
+
+}
+			
+@media (min-width: 767px) {
+	     
+	.wrap {
+		width: 760px; /* 640px + 120px margin left and right */
+	}
+		
+}
+
+@media (min-width: 991px) {
+	     
+	.wrap {
+		width: 1140px; /* 960px + 180px margin left and right */
+	}
+		
+}
+
+.dots {
+	
+	
+}
+
+ul {
+	position: relative;
+	display: flex;
+	align-items: center;
+	list-style: none;
+	width: auto;
+	height: 320px;
+	margin: 0;
+	padding: 0;
+
+	transform: translateX(0px); /* 0px - 380px - 760px */
+
+}
+
+.rings {
+	height: 320px;
+	background-color: #fff;			
+}
+
+ul li {
+	display: inline-block;
+	white-space: nowrap;
+	margin: 0;
+	padding: 0;
+}
+
+.ring-container {
+	width: 320px;
+	height: 320px;
+	margin: 0 30px;
+	padding: 0;
+}
+
+ul > li > div.ring {
+	display: block;
+	width: 320px;
+	height: 320px;
+}
+
+.circle-center {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 0;
+}
+
+.circle-label {
+	font-family: Calibri;
+	font-size: 22px;
+	font-weight: 600;
+	fill: #bbb;
+}
+
+.circle-value {
+	font-family: Calibri;
+	font-size: 28px;
+	font-weight: 700;
+	fill: #444;
+}
+
+.details-label {
+	font-family: Calibri;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.details-percent {
+	font-family: Calibri;
+	font-size: 20px;
+	font-weight: 600;
+	fill: #777;
+}
+
+.details-value {
+	font-family: Calibri;
+	font-size: 20px;
+	font-weight: 400;
+	fill: #ccc;
+}
