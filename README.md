@@ -25,6 +25,19 @@
 
 - No backend development / dependency but a mocked communication with a fake server.
 
+There is currently TWO WAYS to get the data from the backend:
+
+- from json files
+- from a fake connection to a database through express mini server
+
+See Backend installation below
+
+### Tests with Jasmine
+
+Reach http://127.0.0.1/marfeel/js/jasmine/SpecRunner.html
+
+	/marfeel/js/jasmine/spec/bootSpec.js
+	/marfeel/js/jasmine/spec/ringSpec.js
 
 ## Author: 
 
@@ -59,7 +72,7 @@ Open a browser window and type http://127.0.0.1/marfeel/index.html
 
 ## Backend Installation (local):
 
-There is currently TWO WAYS t oget the data from the backend:
+There is currently TWO WAYS to get the data from the backend:
 
 ### 1. From json files
 
