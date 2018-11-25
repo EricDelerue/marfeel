@@ -22,7 +22,7 @@ class Ring {
     this.domain = options.domain; // ['tablet', 'smartphone']
     this.range = options.range; // ['lightgreen', 'darkgreen']
 
-    this.fetchData(this.endpoint);
+    this.fetchData();
   }
 
   init() {
@@ -210,6 +210,10 @@ class Ring {
   setData(data) {
     this.dataset = data;
     this.init();
+  }
+
+  getData() {
+    return this.dataset;
   }
 
   redraw() {
