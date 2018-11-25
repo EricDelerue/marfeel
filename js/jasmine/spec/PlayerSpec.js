@@ -55,6 +55,4 @@ describe('Player', function() {
       }).toThrowError('song is already playing');
     });
   });
-  
-  
 });

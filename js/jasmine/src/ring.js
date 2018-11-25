@@ -23,7 +23,6 @@ class Ring {
     this.range = options.range; // ['lightgreen', 'darkgreen']
 
     this.fetchData();
-    
   }
 
   init() {
@@ -212,9 +211,9 @@ class Ring {
     this.dataset = data;
     this.init();
   }
-  
+
   getData() {
-  	return this.dataset;
+    return this.dataset;
   }
 
   redraw() {

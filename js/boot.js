@@ -1,7 +1,6 @@
 // Put carousel in a IIFE
 // Load three different Ring chart
 (function() {
-	
   const from_urls = {
     files: {
       revenue: 'http://127.0.0.1/marfeel/database/revenue.json',
