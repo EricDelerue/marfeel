@@ -4,20 +4,22 @@
 // With the function hanging out, it could accidentally be invoked again.
 // Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
 (function(d3) {
+	
+	const server = 'http://127.0.0.1';
   const from_urls = {
     files: {
-      revenue: 'http://127.0.0.1/marfeel/database/revenue.json',
-      impresions: 'http://127.0.0.1/marfeel/database/impresions.json',
-      visits: 'http://127.0.0.1/marfeel/database/visits.json',
+      revenue: server + '/marfeel/database/revenue.json',
+      impresions: server + '/marfeel/database/impresions.json',
+      visits: server + '/marfeel/database/visits.json',
     },
     database: {
-      revenue: 'http://127.0.0.1:3000/backend/revenue',
-      impresions: 'http://127.0.0.1:3000/backend/revenue',
-      visits: 'http://127.0.0.1:3000/backend/revenue',
+      revenue: server + ':3000/backend/revenue',
+      impresions: server + ':3000/backend/revenue',
+      visits: server + ':3000/backend/revenue',
     },
   };
 
-  const source = 'files'; // or "database"
+  const source = 'files'; // or "database" (doesn't work on dev.ericdelerue.com)
 
   const revenueOptions = {
     title: 'Revenue',

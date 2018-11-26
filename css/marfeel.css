@@ -18,13 +18,12 @@ body {
 
 .wrap {
 	position: relative;
-	width: 380px; /* 320px + 60px margin left and right */
-	height: 380px;
+	width: 350px; /* 290px + 60px margin left and right */
+	height: 380px; /* 320px + 60px padding top and bottom */
 	margin: auto;
 	padding: 30px 0;
   overflow: hidden;
   /*overflow-x: scroll;*/
-
 }
 
 .dots {
@@ -39,11 +38,11 @@ body {
 @media (min-width: 767px) {
 	     
 	.wrap {
-		width: 760px; /* 640px + 120px margin left and right */
+		width: 700px; /* 580px + 120px margin left and right */
 	}
 	
 	.dots {
-		display: inline-block;
+		display: block;
 	}
 	
 	#dot3 {
@@ -59,7 +58,7 @@ body {
 @media (min-width: 991px) {
 	     
 	.wrap {
-		width: 1140px; /* 960px + 180px margin left and right */
+		width: 1050px; /* 870px + 180px margin left and right */
 	}
 	
 	.dots {
@@ -100,7 +99,7 @@ ul {
 	margin: 0;
 	padding: 0;
 
-	transform: translateX(0px); /* 0px - 380px - 760px */
+	transform: translateX(0px); /* 0px - 350px - 700px */
 	
 }
 
@@ -118,7 +117,7 @@ ul li {
 }
 
 .ring-container {
-	width: 320px;
+	width: 290px; 
 	height: 320px;
 	margin: 0 30px;
 	padding: 0;
@@ -127,7 +126,7 @@ ul li {
 
 ul > li > div.ring {
 	display: block;
-	width: 320px;
+	width: 290px;
 	height: 320px;
 }
 

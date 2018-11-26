@@ -14,6 +14,7 @@ dot1.classList.add('selected');
 const graphicsPanel = document.getElementById('rings-container');
 
 dot1.addEventListener('click', e => {
+	e.preventDefault();
   for (i = 0; i < dotsNumber; i++) {
     dots[i].classList.remove('selected');
   }
@@ -24,23 +25,25 @@ dot1.addEventListener('click', e => {
 });
 
 dot2.addEventListener('click', e => {
+	e.preventDefault();
   for (i = 0; i < dotsNumber; i++) {
     dots[i].classList.remove('selected');
   }
 
   dot2.classList.add('selected');
 
-  graphicsPanel.style.transform = 'translateX(-380px)';
+  graphicsPanel.style.transform = 'translateX(-350px)';
 });
 
 dot3.addEventListener('click', e => {
+	e.preventDefault();
   for (i = 0; i < dotsNumber; i++) {
     dots[i].classList.remove('selected');
   }
 
   dot3.classList.add('selected');
 
-  graphicsPanel.style.transform = 'translateX(-760px)';
+  graphicsPanel.style.transform = 'translateX(-700px)';
 });
 
 /**
@@ -74,7 +77,7 @@ class Ring {
     // define width, height, radius and margins
     this.width = this.element.offsetWidth;
     this.height = this.element.offsetHeight;
-    this.radius = this.width / 3.5;
+    this.radius = this.width / 3; // 3.5;
     this.thickness = 10;
 
     this.margin = {
@@ -192,7 +195,7 @@ class Ring {
     rectangle
       .append('text')
       .attr('text-anchor', 'end')
-      .attr('x', 320)
+      .attr('x', 290)
       .attr('y', 275)
       .attr('class', 'details-label')
       .attr('fill', this.range[1])
@@ -224,7 +227,7 @@ class Ring {
     rectangle
       .append('text')
       .attr('text-anchor', 'start')
-      .attr('x', 180)
+      .attr('x', 150)
       .attr('y', 305)
       .attr('class', 'details-percent')
       .text(this.percent(this.dataset[1].value) + '%');
@@ -232,7 +235,7 @@ class Ring {
     rectangle
       .append('text')
       .attr('text-anchor', 'end')
-      .attr('x', 320)
+      .attr('x', 290)
       .attr('y', 305)
       .attr('class', 'details-value')
       .text(() => {
