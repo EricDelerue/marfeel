@@ -1,5 +1,5 @@
 // IIFE. Tell the parser to parse our JavaScript as a function expression.
-// Why? Privacy. In JavaScript, variables are scoped to their containing function.
+// Why? For privacy. In JavaScript, variables are scoped to their containing function.
 // Creating a named function pollutes the global name space. It also means the named function is hanging around.
 // With the function hanging out, it could accidentally be invoked again.
 // Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
@@ -57,54 +57,56 @@
     impresionsRing.redraw();
     visitsRing.redraw();
   });
-  
-  /*** Mini slider ***/
+
+  /**
+   * Mini slider
+   *
+   */
   const dots = document.querySelectorAll('.dot');
-	const dotsNumber = dots.length;
+  const dotsNumber = dots.length;
 
-	const dot1 = document.getElementById('dot1');
-	const dot2 = document.getElementById('dot2');
-	const dot3 = document.getElementById('dot3');
+  const dot1 = document.getElementById('dot1');
+  const dot2 = document.getElementById('dot2');
+  const dot3 = document.getElementById('dot3');
 
-	for (i = 0; i < dotsNumber; i++) {
-	  dots[i].classList.remove('selected');
-	}
+  for (i = 0; i < dotsNumber; i++) {
+    dots[i].classList.remove('selected');
+  }
 
-	dot1.classList.add('selected');
+  dot1.classList.add('selected');
 
-	const graphicsPanel = document.getElementById('rings-container');
+  const graphicsPanel = document.getElementById('rings-container');
 
-	dot1.addEventListener('click', e => {
-	  e.preventDefault();
-	  for (i = 0; i < dotsNumber; i++) {
-	    dots[i].classList.remove('selected');
-	  }
+  dot1.addEventListener('click', e => {
+    e.preventDefault();
+    for (i = 0; i < dotsNumber; i++) {
+      dots[i].classList.remove('selected');
+    }
 
-	  dot1.classList.add('selected');
+    dot1.classList.add('selected');
 
-	  graphicsPanel.style.transform = 'translateX(0px)';
-	});
+    graphicsPanel.style.transform = 'translateX(0px)';
+  });
 
-	dot2.addEventListener('click', e => {
-	  e.preventDefault();
-	  for (i = 0; i < dotsNumber; i++) {
-	    dots[i].classList.remove('selected');
-	  }
+  dot2.addEventListener('click', e => {
+    e.preventDefault();
+    for (i = 0; i < dotsNumber; i++) {
+      dots[i].classList.remove('selected');
+    }
 
-	  dot2.classList.add('selected');
+    dot2.classList.add('selected');
 
-	  graphicsPanel.style.transform = 'translateX(-350px)';
-	});
+    graphicsPanel.style.transform = 'translateX(-350px)';
+  });
 
-	dot3.addEventListener('click', e => {
-	  e.preventDefault();
-	  for (i = 0; i < dotsNumber; i++) {
-	    dots[i].classList.remove('selected');
-	  }
+  dot3.addEventListener('click', e => {
+    e.preventDefault();
+    for (i = 0; i < dotsNumber; i++) {
+      dots[i].classList.remove('selected');
+    }
 
-	  dot3.classList.add('selected');
+    dot3.classList.add('selected');
 
-	  graphicsPanel.style.transform = 'translateX(-700px)';
-	});
-
+    graphicsPanel.style.transform = 'translateX(-700px)';
+  });
 })(window.d3);
