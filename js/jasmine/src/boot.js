@@ -13,11 +13,6 @@ const from_urls = {
 
 const source = 'files'; // or "database"
 
-console.log(
-  'typeof document.querySelector(test)',
-  document.querySelector('#test') instanceof Element,
-);
-
 const options = {
   title: 'Revenue',
   element: document.querySelector('#test'),

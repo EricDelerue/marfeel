@@ -1,6 +1,6 @@
-// Put carousel in a IIFE
-// Load three different Ring chart
-(function() {
+// tell the parser to parse our JavaScript as a function expression
+// Privacy. In JavaScript, variables are scoped to their containing function.
+(function(d3) {
   const from_urls = {
     files: {
       revenue: 'http://127.0.0.1/marfeel/database/revenue.json',
@@ -16,66 +16,36 @@
 
   const source = 'files'; // or "database"
 
-  //const url = 'http://127.0.0.1/marfeel/';
-
-  // create the svg rings using Ring constructor
-  const revenueRing = new Ring({
+  const revenueOptions = {
     title: 'Revenue',
     element: document.querySelector('#revenue'),
     endpoint: from_urls[source].revenue,
-    /* endpoint: url + 'database/revenue.json',
-    for test purpose only
-    dataset: [
-      {
-        name: 'tablet',
-        value: 120000,
-      },
-      {
-        name: 'smartphone',
-        value: 80000,
-      },
-    ],*/
     domain: ['tablet', 'smartphone'],
     range: ['lightgreen', 'darkgreen'],
-  });
+  };
 
-  const impresionsRing = new Ring({
+  const impresionsOptions = {
     title: 'Impresions',
     element: document.querySelector('#impresions'),
     endpoint: from_urls[source].impresions,
-    /* for test purpose only
-    dataset: [
-      {
-        name: 'tablet',
-        value: 20000000,
-      },
-      {
-        name: 'smartphone',
-        value: 30000000,
-      },
-    ],*/
     domain: ['tablet', 'smartphone'],
     range: ['lightblue', 'darkblue'],
-  });
+  };
 
-  const visitsRing = new Ring({
+  const visitsOptions = {
     title: 'Visits',
     element: document.querySelector('#visits'),
     endpoint: from_urls[source].visits,
-    /* for test purpose only
-    dataset: [
-      {
-        name: 'tablet',
-        value: 480000000,
-      },
-      {
-        name: 'smartphone',
-        value: 120000000,
-      },
-    ],*/
     domain: ['tablet', 'smartphone'],
     range: ['#ffbf00', '#ff8000'],
-  });
+  };
+
+  // create the svg rings using Ring constructor
+  const revenueRing = new Ring(revenueOptions);
+
+  const impresionsRing = new Ring(impresionsOptions);
+
+  const visitsRing = new Ring(visitsOptions);
 
   // redraw chart on each resize
   d3.select(window).on('resize', () => {
@@ -83,4 +53,4 @@
     impresionsRing.redraw();
     visitsRing.redraw();
   });
-})();
+})(window.d3);

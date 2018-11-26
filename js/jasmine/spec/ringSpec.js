@@ -2,7 +2,7 @@ describe('Ring', function() {
   const regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
   //let ring;
-  const ring = new Ring(options);
+  //const ring = new Ring(options);
 
   beforeEach(function() {
     const ring = new Ring(options);
