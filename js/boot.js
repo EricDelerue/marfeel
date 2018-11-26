@@ -63,16 +63,41 @@
    *
   
   var marfeel_slider = function(settings) {
-    var that = this;
-  
+    const that = this;
+
   };
-   
-   */
-   
+  
+  marfeel_slider.prototype.init = function () {
+    const that = this;
+    
+    const graphicsPanel = document.getElementById('rings-container');
+
+  };
+  
+  marfeel_slider.prototype.setDots = function () {  
+    const that = this;
+     
+    const dots = document.querySelectorAll('.dot');
+	  const dotsNumber = dots.length;
+
+	  const dot1 = document.getElementById('dot1');
+	  const dot2 = document.getElementById('dot2');
+	  const dot3 = document.getElementById('dot3');
+
+	  for (i = 0; i < dotsNumber; i++) {
+	    dots[i].classList.remove('selected');
+	  }
+
+	  dot1.classList.add('selected');
+	  
+  };
+    
+  */
+
   function addListenerMultiEvents(el, ev, fn) {
-	  ev.split(' ').forEach(function(e) {
-	    return el.addEventListener(e, fn, false);
-	  });
+    ev.split(' ').forEach(function(e) {
+      return el.addEventListener(e, fn, false);
+    });
   }
 
   const dots = document.querySelectorAll('.dot');
@@ -89,7 +114,7 @@
   dot1.classList.add('selected');
 
   const graphicsPanel = document.getElementById('rings-container');
-        
+
   /*  
   addListenerMultiEvents(dot1, 'mouseup touchend', e => {
     e.preventDefault();
@@ -123,8 +148,8 @@
 
     graphicsPanel.style.transform = 'translateX(-700px)';
   });
-  */  
-  
+  */
+
   dot1.addEventListener('click', e => {
     e.preventDefault();
     for (i = 0; i < dotsNumber; i++) {
@@ -157,5 +182,4 @@
 
     graphicsPanel.style.transform = 'translateX(-700px)';
   });
-
 })(window.d3);
