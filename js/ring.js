@@ -39,7 +39,7 @@ class Ring {
       left: (this.width - this.radius) / 2,
     };
 
-    this.center = { x: (this.width / 2), y: (this.height / 2) + 15 };
+    this.center = { x: this.width / 2, y: this.height / 2 + 15 };
 
     // reset parent element and SVG
     this.element.innerHTML = '';

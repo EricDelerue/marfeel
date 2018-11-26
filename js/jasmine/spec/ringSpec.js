@@ -1,11 +1,12 @@
 describe('Ring', function() {
   const regexp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
 
-  const ring = new Ring(options);
+  //const ring = new Ring(options);
+  let ring;
 
   beforeEach(function() {
-    //const ring = new Ring(options);
-    //console.log(typeof ring);
+    ring = new Ring(options);
+    //console.log('ring.getData()',ring.getData());
   });
 
   describe('ring options parameter', function() {
@@ -55,6 +56,7 @@ describe('Ring', function() {
 	    spyOn(window, 'fetch').and.returnValue(Promise.resolve(testData));
 
 	    ring.fetchData()
+	      //.then( response => response.json() )
 	      .then( result => {
 	        expect(window.fetch).toHaveBeenCalledWith(testEndpoint);
 	        expect(result).toEqual(testData);
@@ -78,40 +80,49 @@ describe('Ring', function() {
 
   //demonstrates use of expected exceptions
   describe('new ring', function() {
-    it('throw an exception if ring is already instanciated', function() {
-      /*expect(function() {
-      	
+    //let ring2 = new Ring(options);
 
-        
-      }).toThrowError('ring is already instanciated');*/
+    it('throw an exception if ring is already instanciated', function() {
+      //expect(function() {
+      //}).toThrowError('ring is already instanciated');
     });
   });
 });
 
-/*
-describe('Testing DOM manipulation', function(){
-      let Dom, item, todo;
-      beforeEach(function(){
-         todo = new ToDo();
-        Dom = new DomManipulation();
-        item = {
-          complete: false,
-          id : 1, 
-          title: 'some Title'
-        }
-     })
-     
-    // it methods will go here ...
-    it('should initialise HTML', function(){
-        const form = document.createElement('form');
-        const input = document.createElement('input')
-        const ul = document.createElement('ul')
-        input.id = "AddItemInput"
-        form.id="addItemForm"
-        form.appendChild(input);
-        expect(Dom.init().form).toEqual(form)
-        expect(Dom.init().ul).toEqual(ul)
-      })    
-});
+function DomManipulation() {}
 
-*/
+DomManipulation.prototype.init = function() {
+  const div = document.createElement('div');
+  const ul = document.createElement('ul');
+  const li = document.createElement('li');
+
+  div.appendChild(ul);
+  ul.appendChild(li);
+
+  return {
+    div,
+    ul,
+    li,
+  };
+};
+
+describe('Testing DOM manipulation', function() {
+  let dom;
+
+  beforeEach(function() {
+    dom = new DomManipulation();
+  });
+
+  it('should initialise HTML', function() {
+    const div = document.createElement('div');
+    const ul = document.createElement('ul');
+    const li = document.createElement('li');
+
+    div.appendChild(ul);
+    ul.appendChild(li);
+
+    expect(dom.init().div).toEqual(div);
+    expect(dom.init().ul).toEqual(ul);
+    expect(dom.init().li).toEqual(li);
+  });
+});

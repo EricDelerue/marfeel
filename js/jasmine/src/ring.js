@@ -22,7 +22,7 @@ class Ring {
     this.domain = options.domain; // ['tablet', 'smartphone']
     this.range = options.range; // ['lightgreen', 'darkgreen']
 
-    this.fetchData();
+    this.dataset = this.fetchData();
   }
 
   init() {
@@ -197,14 +197,23 @@ class Ring {
   }
 
   fetchData() {
-    const parameters = { method: 'GET' };
+    const parameters = { method: 'GET', mode: 'cors' };
 
     // fetch data from api endpoint
-    fetch(this.endpoint, { method: 'GET', mode: 'cors' })
-      .then(response => response.json())
-      //.then(response => logger.info('response.text', response.text()))
-      .then(data => this.setData(data))
-      .catch(error => logger.error(error));
+    return (
+      fetch(this.endpoint)
+        .then(response => response.json())
+        //.then(response => logger.info('response.text', response.text()))
+        .then(data => {
+          logger.info('typeof data', typeof data);
+          this.setData(data);
+          return data;
+        })
+        .catch(error => {
+          logger.error(error);
+          return error;
+        })
+    );
   }
 
   setData(data) {
