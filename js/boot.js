@@ -115,6 +115,39 @@
 
   const graphicsPanel = document.getElementById('rings-container');
 
+  dot1.addEventListener('click', e => {
+    e.preventDefault();
+    for (i = 0; i < dotsNumber; i++) {
+      dots[i].classList.remove('selected');
+    }
+
+    dot1.classList.add('selected');
+
+    graphicsPanel.style.transform = 'translateX(0px)';
+  });
+
+  dot2.addEventListener('click', e => {
+    e.preventDefault();
+    for (i = 0; i < dotsNumber; i++) {
+      dots[i].classList.remove('selected');
+    }
+
+    dot2.classList.add('selected');
+
+    graphicsPanel.style.transform = 'translateX(-350px)';
+  });
+
+  dot3.addEventListener('click', e => {
+    e.preventDefault();
+    for (i = 0; i < dotsNumber; i++) {
+      dots[i].classList.remove('selected');
+    }
+
+    dot3.classList.add('selected');
+
+    graphicsPanel.style.transform = 'translateX(-700px)';
+  });
+
   /*  
   addListenerMultiEvents(dot1, 'mouseup touchend', e => {
     e.preventDefault();
@@ -149,37 +182,5 @@
     graphicsPanel.style.transform = 'translateX(-700px)';
   });
   */
-
-  dot1.addEventListener('click', e => {
-    e.preventDefault();
-    for (i = 0; i < dotsNumber; i++) {
-      dots[i].classList.remove('selected');
-    }
-
-    dot1.classList.add('selected');
-
-    graphicsPanel.style.transform = 'translateX(0px)';
-  });
-
-  dot2.addEventListener('click', e => {
-    e.preventDefault();
-    for (i = 0; i < dotsNumber; i++) {
-      dots[i].classList.remove('selected');
-    }
-
-    dot2.classList.add('selected');
-
-    graphicsPanel.style.transform = 'translateX(-350px)';
-  });
-
-  dot3.addEventListener('click', e => {
-    e.preventDefault();
-    for (i = 0; i < dotsNumber; i++) {
-      dots[i].classList.remove('selected');
-    }
-
-    dot3.classList.add('selected');
-
-    graphicsPanel.style.transform = 'translateX(-700px)';
-  });
+  
 })(window.d3);
