@@ -29,7 +29,7 @@ class Ring {
     // define width, height, radius and margins
     this.width = this.element.offsetWidth;
     this.height = this.element.offsetHeight;
-    this.radius = this.width / 3; // 3.5;
+    this.radius = this.width / 3.5; // 3.5;
     this.thickness = 10;
 
     this.margin = {
@@ -39,7 +39,7 @@ class Ring {
       left: (this.width - this.radius) / 2,
     };
 
-    this.center = { x: this.width / 2, y: this.height / 2 };
+    this.center = { x: (this.width / 2), y: (this.height / 2) + 15 };
 
     // reset parent element and SVG
     this.element.innerHTML = '';
