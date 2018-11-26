@@ -28,8 +28,8 @@ body {
 
 .dots {
 	position: absolute;
-	top: 345px;
-	left: 45%;
+	top: 355px;
+	left: 43%;
 	display: block;
 	width: 60px;
 	height: 15px;
@@ -43,6 +43,7 @@ body {
 	
 	.dots {
 		display: block;
+		left: 47%;
 	}
 	
 	#dot3 {
