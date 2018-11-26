@@ -42,7 +42,7 @@ Reach http://127.0.0.1/marfeel/js/jasmine/SpecRunner.html
 	/marfeel/js/jasmine/spec/bootSpec.js
 	/marfeel/js/jasmine/spec/ringSpec.js
 
-### Tests with Jasmine
+### Responsive Carousel
 
 Simple slider code added on viewport change.
 
