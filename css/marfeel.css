@@ -51,7 +51,7 @@ body {
 		display: none;
 	} 
 	
-	.rings {
+	ul {
 		transform: translateX(0px);
 	}
 				
@@ -67,8 +67,8 @@ body {
 		display: none;
 	}
 	
-	.rings {
-		transform: translateX(0px);
+	ul {
+		transform: translateX(0px); 
 	}
 		
 }
