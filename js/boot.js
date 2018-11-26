@@ -61,6 +61,12 @@
   /**
    * Mini slider
    *
+  
+  var marfeel_slider = function(settings) {
+    var that = this;
+  
+  };
+   
    */
    
   function addListenerMultiEvents(el, ev, fn) {
@@ -68,11 +74,6 @@
 	    return el.addEventListener(e, fn, false);
 	  });
   }
-  
-  var marfeel_slider = function(settings) {
-  var that = this;
-  
-  };
 
   const dots = document.querySelectorAll('.dot');
   const dotsNumber = dots.length;
@@ -88,8 +89,9 @@
   dot1.classList.add('selected');
 
   const graphicsPanel = document.getElementById('rings-container');
-  
-  addListenerMultiEvents(dot1, 'mousedown touchstart', e => {
+        
+  /*  
+  addListenerMultiEvents(dot1, 'mouseup touchend', e => {
     e.preventDefault();
     for (i = 0; i < dotsNumber; i++) {
       dots[i].classList.remove('selected');
@@ -100,7 +102,7 @@
     graphicsPanel.style.transform = 'translateX(0px)';
   });
   
-  addListenerMultiEvents(dot2, 'mousedown touchstart', e => {
+  addListenerMultiEvents(dot2, 'mouseup touchend', e => {
     e.preventDefault();
     for (i = 0; i < dotsNumber; i++) {
       dots[i].classList.remove('selected');
@@ -111,7 +113,7 @@
     graphicsPanel.style.transform = 'translateX(-350px)';
   });
   
-  addListenerMultiEvents(dot3, 'mousedown touchstart', e => {
+  addListenerMultiEvents(dot3, 'mouseup touchend', e => {
     e.preventDefault();
     for (i = 0; i < dotsNumber; i++) {
       dots[i].classList.remove('selected');
@@ -121,8 +123,8 @@
 
     graphicsPanel.style.transform = 'translateX(-700px)';
   });
-        
-  /*
+  */  
+  
   dot1.addEventListener('click', e => {
     e.preventDefault();
     for (i = 0; i < dotsNumber; i++) {
@@ -155,6 +157,5 @@
 
     graphicsPanel.style.transform = 'translateX(-700px)';
   });
-  */  
-  
+
 })(window.d3);
