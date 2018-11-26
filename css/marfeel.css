@@ -130,6 +130,16 @@ ul li {
 	padding: 0;
 	background-color: #fff;		
 	border-bottom: 3px solid #eee;	
+	
+  cursor: default;
+  
+  /* prevent highlight of the images or texts when the user drags the slide */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;	
 }
 
 ul > li > div.ring {
