@@ -1,7 +1,7 @@
 // IIFE. Tell the parser to parse our JavaScript as a function expression.
 // Why? Privacy. In JavaScript, variables are scoped to their containing function.
-// Creating a named function pollutes the global name space. It also means the named function is hanging around. 
-// With the function hanging out, it could accidentally be invoked again. 
+// Creating a named function pollutes the global name space. It also means the named function is hanging around.
+// With the function hanging out, it could accidentally be invoked again.
 // Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
 (function(d3) {
   const from_urls = {

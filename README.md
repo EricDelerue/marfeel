@@ -36,6 +36,9 @@ See Backend installation below
 
 Reach http://127.0.0.1/marfeel/js/jasmine/SpecRunner.html
 
+	/marfeel/js/jasmine/src/boot.js
+	/marfeel/js/jasmine/src/ring.js
+
 	/marfeel/js/jasmine/spec/bootSpec.js
 	/marfeel/js/jasmine/spec/ringSpec.js
 
