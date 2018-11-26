@@ -1,4 +1,3 @@
-
 const dots = document.querySelectorAll('.dot');
 const dotsNumber = dots.length;
 
@@ -6,50 +5,43 @@ const dot1 = document.getElementById('dot1');
 const dot2 = document.getElementById('dot2');
 const dot3 = document.getElementById('dot3');
 
-for(i = 0; i < dotsNumber; i++) {
-   dots[i].classList.remove('selected');
+for (i = 0; i < dotsNumber; i++) {
+  dots[i].classList.remove('selected');
 }
- 
+
 dot1.classList.add('selected');
 
 const graphicsPanel = document.getElementById('rings-container');
 
-dot1.addEventListener('click', (e) => {
+dot1.addEventListener('click', e => {
+  for (i = 0; i < dotsNumber; i++) {
+    dots[i].classList.remove('selected');
+  }
 
-	for(i = 0; i < dotsNumber; i++) {
-	   dots[i].classList.remove('selected');
-	}	
-	
-	dot1.classList.add('selected');
-	
-	graphicsPanel.style.transform="translateX(0px)";
+  dot1.classList.add('selected');
 
+  graphicsPanel.style.transform = 'translateX(0px)';
 });
 
-dot2.addEventListener('click', (e) => {
+dot2.addEventListener('click', e => {
+  for (i = 0; i < dotsNumber; i++) {
+    dots[i].classList.remove('selected');
+  }
 
-	for(i = 0; i < dotsNumber; i++) {
-	   dots[i].classList.remove('selected');
-	}	
-	
-	dot2.classList.add('selected');
-		
-	graphicsPanel.style.transform="translateX(-380px)";
+  dot2.classList.add('selected');
 
+  graphicsPanel.style.transform = 'translateX(-380px)';
 });
 
-dot3.addEventListener('click', (e) => {
+dot3.addEventListener('click', e => {
+  for (i = 0; i < dotsNumber; i++) {
+    dots[i].classList.remove('selected');
+  }
 
-	for(i = 0; i < dotsNumber; i++) {
-	   dots[i].classList.remove('selected');
-	}	
-	
-	dot3.classList.add('selected');
-		
-	graphicsPanel.style.transform="translateX(-760px)";
+  dot3.classList.add('selected');
 
+  graphicsPanel.style.transform = 'translateX(-760px)';
 });
-
 
 /**
  * class Ring
