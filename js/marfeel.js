@@ -14,7 +14,7 @@ dot1.classList.add('selected');
 const graphicsPanel = document.getElementById('rings-container');
 
 dot1.addEventListener('click', e => {
-	e.preventDefault();
+  e.preventDefault();
   for (i = 0; i < dotsNumber; i++) {
     dots[i].classList.remove('selected');
   }
@@ -25,7 +25,7 @@ dot1.addEventListener('click', e => {
 });
 
 dot2.addEventListener('click', e => {
-	e.preventDefault();
+  e.preventDefault();
   for (i = 0; i < dotsNumber; i++) {
     dots[i].classList.remove('selected');
   }
@@ -36,7 +36,7 @@ dot2.addEventListener('click', e => {
 });
 
 dot3.addEventListener('click', e => {
-	e.preventDefault();
+  e.preventDefault();
   for (i = 0; i < dotsNumber; i++) {
     dots[i].classList.remove('selected');
   }

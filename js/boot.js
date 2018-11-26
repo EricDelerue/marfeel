@@ -4,8 +4,7 @@
 // With the function hanging out, it could accidentally be invoked again.
 // Our IIFE isn’t named and therefor can’t accidentally be called later — avoiding any potential security implications.
 (function(d3) {
-	
-	const server = 'http://127.0.0.1';
+  const server = 'http://127.0.0.1';
   const from_urls = {
     files: {
       revenue: server + '/marfeel/database/revenue.json',
