@@ -99,7 +99,13 @@ ul {
 	height: 320px;
 	margin: 0;
 	padding: 0;
-
+	
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
+  transition: .8s;
+  
 	transform: translateX(0px); /* 0px - 350px - 700px */
 	
 }
